@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รู้ทันกลโกง — เกมทอยเต๋าสุ่มการ์ด</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="grain"></div>
+
+<div class="container">
+
+  <header class="masthead">
+    <p class="eyebrow">เกมกระดานรู้ทันกลโกง</p>
+    <h1>รู้ทันกลโกง</h1>
+    <p class="subtitle">ทอยลูกเต๋า เดินเกม แล้วเล่นเกมเพื่อเรียนรู้กลโกงก่อนเจอของจริง</p>
+  </header>
+
+  <section class="panel dice-panel" aria-label="ทอยลูกเต๋า">
+    <div class="panel-label">
+      <span class="tag">ขั้นที่ 1</span>
+      <h2>ทอยลูกเต๋า</h2>
+    </div>
+
+    <div class="dice-row">
+      <div id="dice1" class="dice" role="button" tabindex="0" aria-label="ทอยลูกเต๋า">⚀</div>
+      <div id="dice2" class="dice" role="button" tabindex="0" aria-label="ทอยลูกเต๋า">⚀</div>
+      <div id="dice3" class="dice" role="button" tabindex="0" aria-label="ทอยลูกเต๋า">⚀</div>
+    </div>
+
+    <div class="result-line">
+      <span id="number" class="sum">แตะลูกเต๋าเพื่อเริ่มทอย</span>
+    </div>
+    <p id="move" class="move-hint">ผลรวมของลูกเต๋าคือจำนวนช่องที่เดินได้</p>
+  </section>
+
+  <section class="panel card-panel" aria-label="สุ่มการ์ดสถานการณ์">
+    <div class="panel-label">
+      <span class="tag">ขั้นที่ 2</span>
+      <h2>สุ่มสถานการณ์</h2>
+    </div>
+
+    <button id="drawBtn" class="draw-btn" onclick="randomCard()">
+      สุ่มการ์ดสถานการณ์
+    </button>
+
+    <div class="case-file" id="caseFile">
+
+      <div class="case-file-top">
+        <span id="caseNumber" class="case-number">เหตุการณ์ที่ —</span>
+        <span id="stampBadge" class="stamp-badge" hidden>ระวัง!</span>
+      </div>
+
+      <div class="case-image-frame">
+        <img id="cardImg" alt="">
+        <div id="imgFallback" class="img-fallback" hidden>🗂️</div>
+      </div>
+
+      <h3 id="cardTitle">รอการสุ่ม</h3>
+      <p id="cardDesc">แตะปุ่ม “สุ่มการ์ดสถานการณ์” เพื่อเริ่มสุ่มเหตุการณ์ที่คุณได้รับ</p>
+
+      <a id="videoLink"
+         href="#"
+         target="_blank"
+         rel="noopener"
+         class="video-btn"
+         hidden>
+        ▶ ดูวิดีโอประกอบสถานการณ์
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="foot-note">เล่นคู่กับกระดานเกม “รู้ทันกลโกง” เพื่อเรียนรู้วิธีป้องกันตัวจากมิจฉาชีพ</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
